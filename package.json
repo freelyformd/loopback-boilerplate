@@ -1,0 +1,48 @@
+{
+  "name": "loopback-boilerplate",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && nsp check",
+    "dev:debug": "DEBUG=loopback:security:acl,loopback:user,loopback:security:role,loopback:security:access-context PORT=5000 nodemon -w server .",
+    "dev": "PORT=5000 nodemon -w server ."
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "dotenv": "^5.0.1",
+    "helmet": "^3.10.0",
+    "loopback": "^3.0.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^5.0.0",
+    "loopback-component-model-diagram": "^0.4.0",
+    "loopback-component-passport": "^3.8.0",
+    "loopback-component-storage": "^3.3.1",
+    "loopback-connector-fakemail": "^1.1.1",
+    "loopback-connector-mailgun": "^0.0.11",
+    "loopback-console": "^1.1.0",
+    "loopback-ds-calculated-mixin": "^2.0.4",
+    "loopback-ds-computed-mixin": "^2.0.4",
+    "loopback-ds-timestamp-mixin": "^3.4.1",
+    "nodemon": "^1.17.3",
+    "raven": "^2.5.0",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "loopback-boilerplate"
+}

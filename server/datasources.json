@@ -1,0 +1,18 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "storage.json"
+  },
+  "email": {
+    "name": "email",
+    "connector": "fakemail",
+    "path": "fakemail"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage"
+  }
+}
