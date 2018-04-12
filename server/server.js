@@ -12,7 +12,7 @@ if (process.env.ENABLE_PASSPORT_AUTH) {
   passportConfigurator = new PassportConfigurator(app);
 }
 
-if (!process.env.SENTRY_DSN) {
+if (process.env.SENTRY_DSN) {
   Raven.config(process.env.SENTRY_DSN).install();
 }
 
