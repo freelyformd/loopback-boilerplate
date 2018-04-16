@@ -30,6 +30,9 @@
     "loopback-ds-computed-mixin": "^2.0.4",
     "loopback-ds-timestamp-mixin": "^3.4.1",
     "nodemon": "^1.17.3",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0",
     "raven": "^2.5.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
