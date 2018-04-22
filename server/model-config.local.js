@@ -4,7 +4,7 @@ const passportModels = process.env.ENABLE_PASSPORT_AUTH !== 'true' ? {} :
   {
     'Application': {
       'dataSource': 'db',
-      'public': true
+      'public': true,
     },
     'ApplicationCredential': {
       'dataSource': 'db',

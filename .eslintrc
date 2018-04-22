@@ -1,7 +1,0 @@
-{
-  "extends": "loopback",
-  "env": {
-    "node": true,
-    "es6": true
-  }
-}
