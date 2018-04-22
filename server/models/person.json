@@ -32,12 +32,10 @@
       }
     },
     "permissions": {
-      "name": "permissions",
       "type": "hasMany",
       "model": "ACL",
       "polymorphic": {
-        "foreignKey": "principalId",
-        "discriminator": "principalType"
+        "as": "principal"
       },
       "options": {
         "nestRemoting": true

@@ -41,20 +41,18 @@
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
-    },
-    "relations": {}
+    }
   },
   "Role": {
     "dataSource": "db",
     "public": false,
     "relations": {
       "permissions": {
-        "name": "permissions",
+        "as": "permissions",
         "type": "hasMany",
         "model": "ACL",
         "polymorphic": {
-          "foreignKey": "principalId",
-          "discriminator": "principalType"
+          "as": "principal"
         },
         "options": {
           "nestRemoting": true
