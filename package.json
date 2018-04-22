@@ -11,7 +11,8 @@
     "posttest": "npm run lint && nsp check",
     "dev:debug": "DEBUG=loopback:security:acl,loopback:user,loopback:security:role,loopback:security:access-context PORT=5000 nodemon -w server .",
     "dev": "PORT=5000 nodemon -w server .",
-    "test": "jest"
+    "test": "jest",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -39,12 +40,15 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
     "eslint": "^4.19.1",
     "eslint-config-loopback": "^8.0.0",
     "eslint-plugin-jest": "^21.15.1",
     "jest": "^22.4.3",
     "jest-preset-loopback": "^1.0.0",
     "nsp": "^2.1.0",
+    "semantic-release": "^15.1.7",
     "supertest": "^3.0.0"
   },
   "repository": {
