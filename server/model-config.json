@@ -17,28 +17,50 @@
       "./mixins"
     ]
   },
+  "Application": {
+    "dataSource": "db",
+    "public": true
+  },
   "ApplicationCredential": {
     "dataSource": "db",
     "public": true
   },
   "UserCredential": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Person",
+        "foreignKey": "userId"
+      }
+    }
   },
   "UserIdentity": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Person",
+        "foreignKey": "userId"
+      }
+    }
   },
   "Email": {
     "dataSource": "email",
     "public": false
   },
-  "User": {
-    "dataSource": "db"
-  },
   "AccessToken": {
     "dataSource": "db",
-    "public": false
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Person",
+        "foreignKey": "userId"
+      }
+    }
   },
   "ACL": {
     "dataSource": "db",
@@ -49,23 +71,39 @@
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
-    }
+    },
+    "relations": {}
   },
   "Role": {
     "dataSource": "db",
     "public": false,
     "relations": {
       "permissions": {
+        "name": "permissions",
         "type": "hasMany",
         "model": "ACL",
         "polymorphic": {
-          "foreignKey": "principleId",
-          "discriminator": "principleType"
+          "foreignKey": "principalId",
+          "discriminator": "principalType"
         },
+        "options": {
+          "nestRemoting": true
+        }
+      },
+      "users": {
+        "type": "hasMany",
+        "model": "Person",
+        "polymorphic": "principal",
+        "through": "RoleMapping",
+        "invert": true,
         "options": {
           "nestRemoting": true
         }
       }
     }
+  },
+  "Person": {
+    "dataSource": "db",
+    "public": true
   }
 }
