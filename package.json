@@ -45,6 +45,7 @@
     "eslint": "^4.19.1",
     "eslint-config-loopback": "^8.0.0",
     "eslint-plugin-jest": "^21.15.1",
+    "husky": "^0.14.3",
     "jest": "^22.4.3",
     "jest-preset-loopback": "^1.0.0",
     "nsp": "^2.1.0",
