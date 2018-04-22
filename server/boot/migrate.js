@@ -2,7 +2,7 @@
 
 module.exports = app => {
   // Auto updating models attached to `db` on underlying database
-  app.dataSources.db.autoupdate(null, (err, a) => {
+  app.dataSources.db.autoupdate(null, err => {
     if (err) throw err;
   });
 

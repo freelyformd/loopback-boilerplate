@@ -1,7 +1,8 @@
 module.exports = {
-  "extends": [
+  'extends': [
     "loopback",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "eslint:recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 8,

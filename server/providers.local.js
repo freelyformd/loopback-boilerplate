@@ -15,6 +15,7 @@ module.exports = {
     ],
     profileToUser: (_, profile) => {
       const names = profile.displayName.match(/(\w+)\s+(.+)/);
+      // eslint-disable-next-line no-unused-vars
       const [__, firstname, lastname] = names;
       // TODO: Add es6 support to eslint
       return {firstname, lastname, ...profile};

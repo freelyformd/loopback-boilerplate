@@ -16,13 +16,16 @@ app.start = () => {
   return app.listen(() => {
     app.emit('started');
     const baseUrl = app.get('url').replace(/\/$/, '');
+    // eslint-disable-next-line no-console
     console.log('Web server listening at: %s', baseUrl);
     if (app.get('loopback-component-explorer')) {
       const explorerPath = app.get('loopback-component-explorer').mountPath;
+      // eslint-disable-next-line no-console
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
     if (app.get('loopback-component-model-diagram')) {
       const diagramPath = app.get('loopback-component-model-diagram').mountPath;
+      // eslint-disable-next-line no-console
       console.log('Model relational diagram at %s%s', baseUrl, diagramPath);
     }
   });

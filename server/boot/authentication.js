@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function enableAuthentication(app) {
+module.exports = app => {
   // enable authentication
   app.enableAuth();
 
@@ -22,6 +22,7 @@ module.exports = function enableAuthentication(app) {
       const strategy = config[strategyName];
       strategy.session = strategy.session !== false;
       passportConfigurator.configureProvider(strategyName, strategy);
+      // eslint-disable-next-line no-console
       console.log('Configured %s passport strategy', strategyName);
     });
   }
