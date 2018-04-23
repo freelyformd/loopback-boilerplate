@@ -8,4 +8,4 @@ deploy:
   script:
     - yarn
     - npm run test
-    - npx semantic-release
+    - npm run release
