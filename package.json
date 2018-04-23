@@ -1,5 +1,6 @@
 {
   "name": "loopback-boilerplate",
+  "description": "Barebones loopback 3 project with devtools, useful mixins, versioning, testing + more",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -52,10 +53,14 @@
     "semantic-release": "^15.1.7",
     "supertest": "^3.0.0"
   },
-  "repository": {
-    "type": "",
-    "url": ""
-  },
-  "license": "UNLICENSED",
-  "description": "loopback-boilerplate"
+  "license": "MIT",
+  "keywords": [
+    "loopback",
+    "boilerplate",
+    "api",
+    "rest",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "Ernest Okot"
 }
