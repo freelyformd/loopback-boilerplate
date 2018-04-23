@@ -12,7 +12,7 @@
     "posttest": "npm run lint && nsp check",
     "dev:debug": "DEBUG=loopback:security:acl,loopback:user,loopback:security:role,loopback:security:access-context PORT=5000 nodemon -w server .",
     "dev": "PORT=5000 nodemon -w server .",
-    "test": "jest",
+    "test": "NODE_ENV=test jest",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "release": "semantic-release"
   },
