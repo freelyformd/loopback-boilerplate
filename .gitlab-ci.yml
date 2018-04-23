@@ -1,14 +1,14 @@
 stages:
-  - test
+  - build
   - deploy
 
 build:
   image: node
-  stage: test
+  stage: build
   script:
     - yarn
     - yarn run test
-    - npx semantic-release
+    - npx semantic-release --repository-url $CI_REPOSITORY_URL
   only:
     - master
 
