@@ -24,9 +24,19 @@ app.start = () => {
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
     if (app.get('loopback-component-model-diagram')) {
-      const diagramPath = app.get('loopback-component-model-diagram').mountPath;
+
+      const {
+        mountPath = '',
+        exclude = [],
+      } = app.get('loopback-component-model-diagram');
+
       // eslint-disable-next-line no-console
-      console.log('Model relational diagram at %s%s', baseUrl, diagramPath);
+      console.log(
+        'Model relational diagram at %s%s?exclude=%s',
+        baseUrl,
+        mountPath,
+        exclude.join(',')
+      );
     }
   });
 };

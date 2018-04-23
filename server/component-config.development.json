@@ -4,6 +4,13 @@
     "generateOperationScopedModels": true
   },
   "loopback-component-model-diagram": {
-    "mountPath": "/diagram"
+    "mountPath": "/diagram",
+    "exclude": [
+      "User",
+      "Role",
+      "Email",
+      "RoleMapping",
+      "ACL"
+    ]
   }
 }
