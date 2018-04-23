@@ -1,12 +1,16 @@
 'use strict';
 
-const request = require('supertest');
 const app = require('../server/server');
+const request = require('supertest');
 
-describe('Root path', () => {
-  test('It should response the GET method', async() => {
+afterAll(() => require('fs').unlinkSync('./test.json'));
+
+describe('Application', () => {
+
+  test('it should show application status', async () => {
     const response = await request(app).get('/');
 
     expect(response.statusCode).toBe(200);
   });
+
 });
