@@ -10,7 +10,7 @@ module.exports = {
   'db': {
     'name': 'db',
     'connector': 'memory',
-    'file': 'storage.json',
+    'file': './storage.json',
   },
   'email': process.env.MAIL_PROVIDER ? mailgunSettings : {},
   'storage': {
