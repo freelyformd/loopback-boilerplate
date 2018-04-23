@@ -1,0 +1,25 @@
+stages:
+  - test
+  - deploy
+
+build:
+  image: node
+  stage: test
+  script:
+    - yarn
+    - yarn run test
+    - npx semantic-release
+  only:
+    - master
+
+deploy:
+  image: docker:latest
+  stage: deploy
+  script:
+    - TAG="${CI_COMMIT_TAG:-$CI_COMMIT_REF_SLUG}"
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker build -t "$CI_REGISTRY_IMAGE:$TAG" .
+    - docker push "$CI_REGISTRY_IMAGE:$TAG"
+  only:
+    - tags
+
