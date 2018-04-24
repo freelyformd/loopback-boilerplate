@@ -1,11 +1,9 @@
 # Loopback Boilerplate
 
-Blank loopback 3 project with social auth, dev tools, Sentry, Mailgin and more.
+> Hey there,
+>
+> Thanks for swinging by, we're still working on this
+>
+> Come back soon
 
-## Components
 
-## Connectors
-
-## Mixins
-
-## Dev Tools
