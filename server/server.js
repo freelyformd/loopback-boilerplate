@@ -32,7 +32,7 @@ app.start = () => {
 
       // eslint-disable-next-line no-console
       console.log(
-        'Model relational diagram at %s%s?exclude=%s',
+        'Model relational diagram at %s%s?direction=right&exclude=%s',
         baseUrl,
         mountPath,
         exclude.join(',')
