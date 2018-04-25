@@ -3,13 +3,18 @@
 require('dotenv').config();
 const loopback = require('loopback');
 const boot = require('loopback-boot');
-const Raven = require('raven');
 
 const app = module.exports = loopback();
 
 if (process.env.SENTRY_DSN) {
+  const Raven = require('raven');
   Raven.config(process.env.SENTRY_DSN).install();
 }
+
+app.use(loopback.token({
+  model: app.models.accessToken,
+  currentUserLiteral: 'me'
+}));
 
 app.start = () => {
   // start the web server
