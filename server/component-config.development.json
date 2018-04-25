@@ -10,7 +10,8 @@
       "Role",
       "Email",
       "RoleMapping",
-      "ACL"
+      "ACL",
+      "AccessToken"
     ]
   }
 }
