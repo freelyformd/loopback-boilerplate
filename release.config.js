@@ -6,6 +6,10 @@ module.exports = {
   ],
   "prepare": [
     {
+      "path": "@semantic-release/changelog",
+      "changelogFile": "CHANGELOG.md",
+    },
+    {
       "path": "@semantic-release/npm",
       "npmPublish": false,
     },
